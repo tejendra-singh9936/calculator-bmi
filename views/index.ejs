@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #headings {
+        text-align: center;
+      }
+      table {
+        margin-left: 30px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 15px;
+      }
+      th {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="headings">BMI Calculator</h1>
+    <table style="width: 60%">
+      <tr>
+        <th>BMI</th>
+        <th>BMI_CATEGORY</th>
+        <th>HEALTH_RISK</th>
+      </tr>
+      <% bmiData.filter((currentValue)=>{ %>
+      <tr>
+        <td><%=currentValue.bmi%></td>
+        <td><%=currentValue.bmiCategory%></td>
+        <td><%=currentValue.healthRisk%></td>
+      </tr>
+      <%})%>
+    </table>
+    <h1>Number of overWeight People : <%=count%></h1>
+  </body>
+</html>
